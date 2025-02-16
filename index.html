@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reportar Abuso Anónimo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body>
+    <h1>Reportar Abuso Anónimo</h1>
+    <form id="formulario-reporte" class="form-register">
+        <h2 class="form-titulo">REPORTAR ABUSO</h2>
+        <div class="contenedor-inputs">
+            <input type="text" id="dui" name="dui" placeholder="DUI (Opcional)" class="input-48">
+            
+            <select id="tipo-abuso" name="tipo-abuso" class="input-100" required>
+                <option value="" disabled selected>Selecciona el tipo de abuso</option>
+                <option value="Violencia Doméstica">Violencia Doméstica</option>
+                <option value="Abuso Sexual">Abuso Sexual</option>
+                <option value="Explotación Laboral">Explotación Laboral</option>
+                <option value="Discriminación">Discriminación</option>
+                <option value="Acoso">Acoso</option>
+                <option value="Maltrato Infantil">Maltrato Infantil</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <textarea id="descripcion" name="descripcion" placeholder="Descripción del abuso" class="input-100" required></textarea>
+
+            <label for="evidencia" class="input-100">Adjuntar evidencia (imágenes, documentos, etc.):</label>
+            <input type="file" id="evidencia" name="evidencia" class="input-100" accept="image/*, .pdf, .doc, .docx" multiple>
+
+            <input type="submit" value="Reportar" class="btn-enviar">
+
+            <p class="form-link">¿Necesitas ayuda? <a href="#">Contacta con nosotros</a></p>
+        </div>
+    </form>
+
+    <div id="mensaje-confirmacion" class="mensaje-confirmacion">
+        <p>Su caso se ha enviado a las organizaciones competentes. Gracias por su reporte.</p>
+    </div>
+</body>
+</html>
